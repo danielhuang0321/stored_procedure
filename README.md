@@ -16,3 +16,4 @@
 - 如果以上都符合，則創建訂單和寫入日誌，最後將 out_result 變量設置為1，表示OK。
 
 
+(https://bayimg.com/b68b1f4b17d090fadaf453fcd9dfa6bad7a79057.jpg)
