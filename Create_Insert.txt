@@ -1,0 +1,28 @@
+CREATE TABLE `product` (
+  `product_id` int NOT NULL AUTO_INCREMENT,
+  `product_name` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `price` decimal(10,0) NOT NULL,
+  `stock` int NOT NULL,
+  PRIMARY KEY (`product_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `user_order` (
+  `order_id` int NOT NULL AUTO_INCREMENT,
+  `user_id` int NOT NULL,
+  `product_id` int NOT NULL,
+  `order_status` varchar(45) NOT NULL,
+  `create_datetime` datetime NOT NULL,
+  `update_datetime` datetime DEFAULT NULL,
+  PRIMARY KEY (`order_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+INSERT INTO `storedprocedure`.`product` (`product_id`, `product_name`, `price`, `stock`) VALUES ('1', 'money', '200', '50');
+INSERT INTO `storedprocedure`.`product` (`product_id`, `product_name`, `price`, `stock`) VALUES ('2', 'apple', '50', '70');
+INSERT INTO `storedprocedure`.`product` (`product_id`, `product_name`, `price`, `stock`) VALUES ('3', 'paper', '100', '100');
+
+
+INSERT INTO `storedprocedure`.`user_order` (`order_id`, `user_id`, `product_id`, `order_status`, `create_datetime`) VALUES ('1', '123', '1', 'deliver', '2023-05-10 12:30:45');
+INSERT INTO `storedprocedure`.`user_order` (`order_id`, `user_id`, `product_id`, `order_status`, `create_datetime`) VALUES ('2', '223', '2', 'return','2023-05-11 12:30:45');
+INSERT INTO `storedprocedure`.`user_order` (`order_id`, `user_id`, `product_id`, `order_status`, `create_datetime`) VALUES ('3', '123', '3', 'deliver','2023-05-12 12:30:45');
+

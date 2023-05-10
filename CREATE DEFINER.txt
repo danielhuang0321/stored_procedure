@@ -1,0 +1,66 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `BuyProduct`(
+	IN  in_user_id INT,
+	IN  in_product_id INT,
+	IN  in_buy_count INT,
+	OUT out_result INT
+)
+BEGIN
+    -- 取得使用者驗證狀態
+	SET @user_verified := -1;
+    
+    SELECT verified 
+    INTO @user_verified
+    FROM `user` 
+    WHERE user_id = in_user_id;
+    
+    IF @user_verified = -1 THEN
+		SET out_result = -1; -- 無效的使用者 ID
+	ELSEIF @user_verified = 0 THEN 
+		SET out_result = -2; -- 使用者未通過驗證
+	ELSEIF @user_verified = 1 THEN 
+		-- 檢查庫存數量
+        SET @stock := -1;
+        
+		SELECT stock 
+        INTO @stock
+        FROM product 
+        WHERE product_id = in_product_id;
+        
+        IF @stock = -1 THEN
+			SET out_result = -3; -- 無效的商品 ID
+		ELSEIF @stock < in_buy_count THEN
+			SET out_result = -4; -- 商品庫存不足
+		ELSE
+			-- 建立訂單
+			INSERT INTO `user_order`
+			(
+				`user_id`,
+				`product_id`,
+				`order_status`,
+				`create_datetime`
+            )
+			VALUES
+			(
+				in_user_id,
+				in_product_id,
+				'NEW ORDER',
+				NOW()
+            );
+
+			-- 寫入 LOG
+            INSERT INTO `user_log`
+			(
+				`user_id`,
+				`action`,
+				`action_datetime`
+            )
+			VALUES
+			(
+				in_user_id,
+				'CREATE ORDER',
+				NOW()
+            );
+            SET out_result = 1; -- OK
+		END IF;
+    END IF;
+END

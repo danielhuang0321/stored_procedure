@@ -1,0 +1,3 @@
+SET @test := 0; -- 宣告儲存結果的變數
+CALL BuyProduct('1', 1, 10, @test); -- 呼叫 SP
+SELECT @test; -- 把結果取出來
