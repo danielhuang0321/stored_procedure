@@ -18,4 +18,6 @@
 ![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https://bayimg.com/b68b1f4b17d090fadaf453fcd9dfa6bad7a79057.jpg)
 
 
+![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https://bayimg.com/aca083f8aa00f7d646064f5df604ad159675acf6.jpg)
+
 
