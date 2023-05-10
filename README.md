@@ -1,5 +1,4 @@
-# stored_procedure
- 預存程序
+# Stored Procedure 預存程序
 
 
 這是一個MySQL儲存程序，目的是檢查並購買一個產品。在程式碼中，將四個輸入參數定義為整數，分別是 in_user_id、in_product_id、in_buy_count 和 out_result。在這個存儲程序中，使用了一些變量來存儲獲取的值，如 @user_verified 和 @stock。
