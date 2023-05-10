@@ -5,6 +5,8 @@
 
 在程式碼中，將四個輸入參數定義為整數，分別是 in_user_id、in_product_id、in_buy_count 和 out_result。
 
+![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https://bayimg.com/b68b1f4b17d090fadaf453fcd9dfa6bad7a79057.jpg)
+
 在這個存儲程序中，使用了一些變量來存儲獲取的值，如 @user_verified 和 @stock。
 
 在存儲程序中，先設置了 @user_verified 變量的初始值為-1，然後通過查詢 user 資料表並將驗證狀態值 assigned 給該變量。
@@ -14,10 +16,8 @@
 - 如果獲取的值等於-1，則設置 out_result 變量為-3，表示無效的商品 ID。
 - 如果庫存量小於需要購買的量，則設置 out_result 變量為-4，表示商品庫存不足。
 - 如果以上都符合，則創建訂單和寫入日誌，最後將 out_result 變量設置為1，表示OK。
-
-![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https://bayimg.com/b68b1f4b17d090fadaf453fcd9dfa6bad7a79057.jpg)
-
-
+- 
 ![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https://bayimg.com/aca083f8aa00f7d646064f5df604ad159675acf6.jpg)
+
 
 
