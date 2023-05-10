@@ -15,5 +15,7 @@
 - 如果庫存量小於需要購買的量，則設置 out_result 變量為-4，表示商品庫存不足。
 - 如果以上都符合，則創建訂單和寫入日誌，最後將 out_result 變量設置為1，表示OK。
 
+![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https://bayimg.com/b68b1f4b17d090fadaf453fcd9dfa6bad7a79057.jpg)
 
-( https://bayimg.com/b68b1f4b17d090fadaf453fcd9dfa6bad7a79057.jpg )
+
+
