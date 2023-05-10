@@ -9,7 +9,7 @@
 
 在這個存儲程序中，使用了一些變量來存儲獲取的值，如 @user_verified 和 @stock。
 
-在存儲程序中，先設置了 @user_verified 變量的初始值為-1，然後通過查詢 user 資料表並將驗證狀態值 assigned 給該變量。
+先設置了 @user_verified 變量的初始值為-1，然後通過查詢 user 資料表並將驗證狀態值 assigned 給該變量。
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `BuyProduct`(
 	IN  in_user_id INT,
